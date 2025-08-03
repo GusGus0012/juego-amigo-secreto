@@ -196,6 +196,7 @@ Link del Proyecto: [https://github.com/GusGus0012/juego-amigo-secreto](https://g
 ## Agradecimientos
 
 * [Cómo escribir un README increíble en tu Github | Alura LATAM](https://www.aluracursos.com/blog/como-escribir-un-readme-increible-en-tu-github)
+* [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
 
 <p align="right">(<a href="#readme-top">volver arriba</a>)</p>
 
