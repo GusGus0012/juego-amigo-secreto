@@ -23,7 +23,7 @@
     <a href="https://github.com/GusGus0012/juego-amigo-secreto"><strong>Explora la documentación »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/GusGus0012/juego-amigo-secreto">Ver Demo</a>
+    <a href="https://gusgus0012.github.io/juego-amigo-secreto/">Ver Demo</a>
     ·
     <a href="https://github.com/GusGus0012/juego-amigo-secreto/issues">Reportar Bug</a>
     ·
