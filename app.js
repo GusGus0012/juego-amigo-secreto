@@ -19,27 +19,24 @@ function agregarAmigo() {
     let amigoAgregado = document.getElementById('amigo').value;  // Variable para almacenar el nombre del amigo agregado
     if (amigoAgregado.trim() === '') { // Verifica si el input está vacío o solo contiene espacios
         alert("Por favor, inserte un nombre."); // Mensaje de error si el nombre está vacío o solo contiene espacios
-        return LimpiarCajaTexto(); // Sale de la función y limpia la casilla si el nombre está vacío
     }
     else if (amigos.includes(amigoAgregado)) {
         alert("El nombre ya existe. Por favor, inserte un nombre diferente."); // Mensaje de error si el nombre ya existe
-        return LimpiarCajaTexto(); // Sale de la función y limpia la casilla si el nombre ya existe
     }
     else {
         amigos.push(amigoAgregado); // Añade el nombre a la lista de amigos
-        LimpiarCajaTexto(); // Limpia el input del usuario
         actualizarListaAmigos(); // Actualiza la lista de amigos en la interfaz
     }
+    return LimpiarCajaTexto(); // Sale de la función y limpia la casilla
 }
 function sortearAmigo() {
     let maximo = amigos.length - 1; // Calcula el índice máximo basado en la cantidad de amigos
-    let minimo = 0; // El índice mínimo siempre será 0
-    let nuevoNumero; // Variable para almacenar el número aleatorio generado
+    let indiceAleatorio; // Variable para almacenar el número aleatorio generado que será el índice del amigo seleccionado
     if (amigos.length < 2) {
         alert("Por favor, agregue al menos dos amigos para realizar el sorteo."); // Mensaje de error si hay menos de dos amigos ya que no tendría sentido sortear
         return;
     }
-    nuevoNumero = Math.floor((Math.random() * ((maximo + 1) - minimo) + minimo)); // Genera un número secreto aleatorio entre el mínimo y el máximo ingresados por el usuario
+    indiceAleatorio = Math.floor((Math.random() * (maximo + 1))); // Genera un número secreto aleatorio entre el mínimo = 0 (por eso ya no lo declaro como variable) y el máximo que sería la cantidad de amigos
     let resultado = document.getElementById('resultado'); // Obtiene el elemento donde se mostrará el resultado del sorteo
-    resultado.innerHTML = amigos[nuevoNumero]; // Muestra el nombre del amigo seleccionado aleatoriamente en el elemento resultado
+    resultado.innerHTML = amigos[indiceAleatorio]; // Muestra el nombre del amigo seleccionado aleatoriamente en el elemento resultado
 }
